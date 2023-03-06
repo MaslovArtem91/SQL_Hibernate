@@ -19,10 +19,10 @@ import java.io.Serializable;
 public class Person implements Serializable {
     @Id
     private String name;
-    @Id
+    
     private String surname;
-    @Id
+    
     private int age;
-    private char phone_number;
-    private String city_of_living;
+    private String phoneNumber;
+    private String cityOfLiving;
 }
