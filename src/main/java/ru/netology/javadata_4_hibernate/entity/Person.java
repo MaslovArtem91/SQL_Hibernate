@@ -16,13 +16,15 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Table(name = "persons")
 @Entity
+@IdClass(Person.class)
 public class Person implements Serializable {
     @Id
     private String name;
-    
+    @Id
     private String surname;
-    
+    @Id
     private int age;
     private String phoneNumber;
+    @Column(name="first_name")
     private String cityOfLiving;
 }
