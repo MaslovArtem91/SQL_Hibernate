@@ -25,6 +25,6 @@ public class Person implements Serializable {
     @Id
     private int age;
     private String phoneNumber;
-    @Column(name="first_name")
+    @Column(name="city_of_living")
     private String cityOfLiving;
 }
