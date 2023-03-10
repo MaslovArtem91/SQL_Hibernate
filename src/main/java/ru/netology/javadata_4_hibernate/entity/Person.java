@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 import java.io.Serializable;
 
@@ -16,15 +17,14 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Table(name = "persons")
 @Entity
-@IdClass(Person.class)
+
 public class Person implements Serializable {
-    @Id
-    private String name;
-    @Id
-    private String surname;
-    @Id
-    private int age;
+    @EmbeddedId
+    private PersonKey personKey;
+    @Column(nullable = false)
     private String phoneNumber;
     @Column(name="city_of_living")
     private String cityOfLiving;
+
+
 }
